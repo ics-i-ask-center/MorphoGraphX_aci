@@ -38,10 +38,18 @@ From: nvidia/cuda:9.0-devel-ubuntu16.04
     apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y locales
     
     cd /gpfs/scratch/
-    wget https://www.mpipz.mpg.de/4607782/MGX-1_0_1280-LinuxMint18_1-CellAtlas-Cuda9_1.zip
-    unzip MGX-1_0_1280-LinuxMint18_1-CellAtlas-Cuda9_1.zip
-    dpkg -i MGX-1.0.1280-LinuxMint18.1-Cuda9.1-CellAtlas.deb || true
+#    wget https://www.mpipz.mpg.de/4607782/MGX-1_0_1280-LinuxMint18_1-CellAtlas-Cuda9_1.zip
+#    unzip MGX-1_0_1280-LinuxMint18_1-CellAtlas-Cuda9_1.zip
+#    dpkg -i MGX-1.0.1280-LinuxMint18.1-Cuda9.1-CellAtlas.deb || true
 #    apt-get install -y -f
+
+# On ACI cluster, current driver version (390.30) does not support CUDA toolkit 9.1
+# So, try to download 9.0 version of MGX
+# https://docs.nvidia.com/deploy/cuda-compatibility/index.html
+    wget https://www.mpipz.mpg.de/4607782/MGX-1_0_1280-LinuxMint18_1-CellAtlas-Cuda9_0.zip
+    unzip MGX-1_0_1280-LinuxMint18_1-CellAtlas-Cuda9_0.zip
+    # They don't seem like to support 9.0 version (output has same name)
+    dpkg -i MGX-1.0.1280-LinuxMint18.1-Cuda9.1-CellAtlas.deb || true
     
     rm MGX-1_0_1280-LinuxMint18_1-CellAtlas-Cuda9_1.zip
     rm MGX-1.0.1280-LinuxMint18.1-Cuda9.1-CellAtlas.deb
