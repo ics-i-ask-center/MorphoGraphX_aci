@@ -18,7 +18,14 @@ From: nvidia/cuda:9.1-runtime-ubuntu16.04
     python3-pip \
     pkg-config \
     python-setuptools \
-    python3-setuptools
+    python3-setuptools \
+    libqt4-dev \
+    libqt4-opengl-dev \
+    cimg-dev \
+    libgsl0-dev \
+    libtiff5-dev \
+    cmake \
+    doxygen
     
     mkdir -p /storage/home
     mkdir -p /storage/work
