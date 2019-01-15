@@ -6,7 +6,6 @@ From: nvidia/cuda:9.1-runtime-ubuntu16.04
 
 %post
     apt-get update
-    apt-get upgrade
     
     mkdir -p /storage/home
     mkdir -p /storage/work
