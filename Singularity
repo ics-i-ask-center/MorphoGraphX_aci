@@ -26,7 +26,7 @@ From: nvidia/cuda:9.1-runtime-ubuntu16.04
     libgsl0-dev \
     libtiff5-dev \
     cmake \
-    cmake-gui
+    cmake-gui \
     doxygen
     
     mkdir -p /storage/home
