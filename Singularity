@@ -21,10 +21,12 @@ From: nvidia/cuda:9.1-runtime-ubuntu16.04
     python3-setuptools \
     libqt4-dev \
     libqt4-opengl-dev \
+    libglew-dev \
     cimg-dev \
     libgsl0-dev \
     libtiff5-dev \
     cmake \
+    cmake-gui
     doxygen
     
     mkdir -p /storage/home
