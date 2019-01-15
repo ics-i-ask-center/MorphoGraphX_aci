@@ -7,6 +7,7 @@ From: nvidia/cuda:9.1-runtime-ubuntu16.04
 %post
     apt-get update
     apt-get install -y build-essential \
+    apt-utils \
     gcc-multilib \
     wget \
     unzip \
