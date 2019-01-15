@@ -1,5 +1,6 @@
 BootStrap: docker
-From: nvidia/cuda:9.1-devel-ubuntu16.04
+#From: nvidia/cuda:9.1-devel-ubuntu16.04
+From: nvidia/cuda:9.0-devel-ubuntu16.04
 
 %runscript
     echo "This is what happens when you run the container..."
