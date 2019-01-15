@@ -6,7 +6,17 @@ From: nvidia/cuda:9.1-runtime-ubuntu16.04
 
 %post
     apt-get update
-    apt-get install -y wget unzip
+    apt-get install -y build-essential \
+    gcc-multilib \
+    wget \
+    unzip \
+    python-dev \
+    python3-dev \
+    python-pip \
+    python3-pip \
+    pkg-config \
+    python-setuptools \
+    python3-setuptools
     
     mkdir -p /storage/home
     mkdir -p /storage/work
