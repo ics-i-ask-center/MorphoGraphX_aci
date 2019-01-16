@@ -29,6 +29,11 @@ From: nvidia/cuda:9.1-devel-ubuntu16.04
     cmake-gui \
     doxygen
     
+    # install nvidia driver (current system version: 390.30)
+    add-apt-repository ppa:graphics-drivers/ppa
+    apt install -y nvidia-390.30
+
+    
     mkdir -p /storage/home
     mkdir -p /storage/work
     mkdir -p /gpfs/scratch
