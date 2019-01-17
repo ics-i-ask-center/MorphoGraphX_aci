@@ -29,12 +29,12 @@ From: nvidia/cuda:9.1-devel-ubuntu16.04
     cmake-gui \
     doxygen \
     software-properties-common \
-    python-software-properties
+    python-software-properties \
+    nux-tools
     
     # install nvidia driver (current system version: 390.30)
     add-apt-repository -y ppa:graphics-drivers/ppa
-    apt-get install -y nvidia-390
-    # apt install -y nvidia-390.30
+    apt-get install -y nvidia-390-dev
 
     
     mkdir -p /storage/home
