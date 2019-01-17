@@ -27,8 +27,9 @@ From: nvidia/cuda:9.1-devel-ubuntu16.04
     libtiff5-dev \
     cmake \
     cmake-gui \
-    doxygen 
-#    software-properties-common
+    doxygen \
+    software-properties-common \
+    python-software-properties
     
     # install nvidia driver (current system version: 390.30)
     add-apt-repository ppa:graphics-drivers/ppa
