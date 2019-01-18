@@ -3,6 +3,17 @@ From: nvidia/cuda:9.1-devel-ubuntu16.04
 
 %runscript
 
+%environment
+    # nvidia driver libs specific cuda version libs are mounted by --bind command at run
+    # required for GPU enabled container
+    SHELL=/bin/bash
+    CPATH="/cuda/include:$CPATH"
+    PATH="/cuda/bin:/nvidia:$PATH"
+    LD_LIBRARY_PATH="/cuda/lib64:/nvidia:$LD_LIBRARY_PATH"
+    CUDA_HOME="/cuda"
+    export PATH LD_LIBRARY_PATH CPATH CUDA_HOME
+    export LD_PRELOAD=$LD_PRELOAD:/usr/lib/libopentextdlfaker.so.3:/usr/lib64/libopentextdlfaker.so.3
+
 %post
     apt-get update
     apt-get install -y --no-install-recommends \
@@ -34,7 +45,9 @@ From: nvidia/cuda:9.1-devel-ubuntu16.04
     python-software-properties \
     nux-tools \
     libcanberra-gtk-module \
-    libcanberra-gtk3-module
+    libcanberra-gtk3-module \
+    mesa-utils \
+    
     
     # https://askubuntu.com/a/872397
     
