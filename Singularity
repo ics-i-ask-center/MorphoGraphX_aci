@@ -18,9 +18,11 @@ From: nvidia/cuda:9.1-devel-ubuntu16.04
     pkg-config \
     python-setuptools \
     python3-setuptools \
+    g++ \
     libqt4-dev \
     libqt4-opengl-dev \
     qt4-qmake \
+    qt4-qtconfig \
     libglew-dev \
     cimg-dev \
     libgsl0-dev \
@@ -30,7 +32,11 @@ From: nvidia/cuda:9.1-devel-ubuntu16.04
     doxygen \
     software-properties-common \
     python-software-properties \
-    nux-tools 
+    nux-tools \
+    libcanberra-gtk-module \
+    libcanberra-gtk3-module
+    
+    # https://askubuntu.com/a/872397
     
     # install nvidia driver (current system version: 390.30)
     add-apt-repository -y ppa:graphics-drivers/ppa
