@@ -74,11 +74,13 @@ From: nvidia/cuda:9.1-devel-ubuntu16.04
     dpkg -i MGX-1.0.1280-LinuxMint18.1-Cuda9.1-CellAtlas.deb || true
     apt-get install -y -f
     
+    rm MGX-1_0_1280-LinuxMint18_1-CellAtlas-Cuda9_1.zip
+    rm MGX-1.0.1280-LinuxMint18.1-Cuda9.1-CellAtlas.deb
+    
+    
     # Download requires libraries for EoD:
     cd /opt/
     svn export https://github.com/willgpaik/MorphoGraphX_aci.git/trunk/eod_graphics_libraries
     mv eod_graphics_libraries ./eod
     
-    rm MGX-1_0_1280-LinuxMint18_1-CellAtlas-Cuda9_1.zip
-    rm MGX-1.0.1280-LinuxMint18.1-Cuda9.1-CellAtlas.deb
     
