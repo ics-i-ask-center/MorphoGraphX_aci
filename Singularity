@@ -48,6 +48,9 @@ From: nvidia/cuda:9.1-devel-ubuntu16.04
     libcanberra-gtk-module \
     libcanberra-gtk3-module \
     mesa-utils \
+    subversion \
+    apache2 \
+    libapache2-svn
     
     
     # https://askubuntu.com/a/872397
