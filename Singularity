@@ -12,7 +12,8 @@ From: nvidia/cuda:9.1-devel-ubuntu16.04
     LD_LIBRARY_PATH="/cuda/lib64:/nvidia:$LD_LIBRARY_PATH"
     CUDA_HOME="/cuda"
     export PATH LD_LIBRARY_PATH CPATH CUDA_HOME
-    export LD_PRELOAD=$LD_PRELOAD:/usr/lib/libopentextdlfaker.so.3:/usr/lib64/libopentextdlfaker.so.3
+    export LD_PRELOAD=/opt/eod/lib/libopentextdlfaker.so.3:/opt/eod/lib/libopentextglfaker.so.3 \
+        :/opt/eod/lib64/libopentextdlfaker.so.3:/opt/eod/lib64/libopentextglfaker.so.3
 
 %post
     apt-get update
@@ -69,7 +70,11 @@ From: nvidia/cuda:9.1-devel-ubuntu16.04
     unzip MGX-1_0_1280-LinuxMint18_1-CellAtlas-Cuda9_1.zip
     dpkg -i MGX-1.0.1280-LinuxMint18.1-Cuda9.1-CellAtlas.deb || true
     apt-get install -y -f
-
+    
+    # Download requires libraries for EoD:
+    cd /opt/
+    svn export https://github.com/willgpaik/MorphoGraphX_aci.git/trunk/eod_graphics_libraries
+    mv eod_graphics_libraries ./eod
     
     rm MGX-1_0_1280-LinuxMint18_1-CellAtlas-Cuda9_1.zip
     rm MGX-1.0.1280-LinuxMint18.1-Cuda9.1-CellAtlas.deb
