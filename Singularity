@@ -50,7 +50,8 @@ From: nvidia/cuda:9.1-devel-ubuntu16.04
     mesa-utils \
     subversion \
     apache2 \
-    libapache2-svn
+    libapache2-svn \
+    libinsighttoolkit4-dev    
     
     
     # https://askubuntu.com/a/872397
