@@ -55,9 +55,9 @@ From: nvidia/cuda:9.1-devel-ubuntu16.04
     
     
     # Download requires libraries for EoD:
-    cd /opt/
-    svn export https://github.com/willgpaik/MorphoGraphX_aci.git/trunk/eod_graphics_libraries
-    mv eod_graphics_libraries eod
+#    cd /opt/
+#    svn export https://github.com/willgpaik/MorphoGraphX_aci.git/trunk/eod_graphics_libraries
+#    mv eod_graphics_libraries eod
     
     
     # https://askubuntu.com/a/872397
