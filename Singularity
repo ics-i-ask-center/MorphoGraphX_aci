@@ -51,7 +51,13 @@ From: nvidia/cuda:9.1-devel-ubuntu16.04
     subversion \
     apache2 \
     libapache2-svn \
-    libinsighttoolkit4-dev    
+    libinsighttoolkit4-dev
+    
+    
+    # Download requires libraries for EoD:
+    cd /opt/
+    svn export https://github.com/willgpaik/MorphoGraphX_aci.git/trunk/eod_graphics_libraries
+    mv eod_graphics_libraries eod
     
     
     # https://askubuntu.com/a/872397
@@ -78,10 +84,5 @@ From: nvidia/cuda:9.1-devel-ubuntu16.04
     rm MGX-1_0_1280-LinuxMint18_1-CellAtlas-Cuda9_1.zip
     rm MGX-1.0.1280-LinuxMint18.1-Cuda9.1-CellAtlas.deb
     
-    
-    # Download requires libraries for EoD:
-    cd /opt/
-    svn export https://github.com/willgpaik/MorphoGraphX_aci.git/trunk/eod_graphics_libraries
-    mv eod_graphics_libraries ./eod
     
     
