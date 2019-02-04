@@ -12,8 +12,8 @@ From: nvidia/cuda:9.1-devel-ubuntu16.04
     LD_LIBRARY_PATH="/cuda/lib64:/nvidia:$LD_LIBRARY_PATH"
     CUDA_HOME="/cuda"
     export PATH LD_LIBRARY_PATH CPATH CUDA_HOME
-    export LD_PRELOAD=/opt/eod/lib/libopentextdlfaker.so.3:/opt/eod/lib/libopentextglfaker.so.3 \
-        :/opt/eod/lib64/libopentextdlfaker.so.3:/opt/eod/lib64/libopentextglfaker.so.3
+    export LD_PRELOAD=/opt/eod/lib/libopentextdlfaker.so.3:/opt/eod/lib/libopentextglfaker.so.3
+    export LD_PRELOAD=$LD_PRELOAD:/opt/eod/lib64/libopentextdlfaker.so.3:/opt/eod/lib64/libopentextglfaker.so.3
 
 %post
     apt-get update
