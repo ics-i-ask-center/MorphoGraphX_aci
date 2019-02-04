@@ -6,4 +6,4 @@ Having some issue with X11, nVidia graphics driver, or CUDA
 This singularity image requires CUDA version 9.1 and nVidia driver version 390.30
 
 2019/2/2
-Libraries for ExceedonDemand are added (in progress)
+Libraries for ExceedonDemand are added
