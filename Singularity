@@ -19,6 +19,7 @@ From: nvidia/cuda:9.1-devel-ubuntu16.04
 
 %post
     apt-get -y update
+    apt-get -y upgrade
     apt-get install -y --no-install-recommends \
     build-essential \
     apt-utils \
